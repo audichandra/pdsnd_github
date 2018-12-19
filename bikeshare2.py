@@ -177,19 +177,22 @@ def user_stats(df):
     print('-'*40)
 
 def raw_input(df):
+    z = 0
     while True:
         data_input = input('\nwould you like to display individual raw data? Enter yes or no.\n')
-        message = "\n'id':'{}',\n'Birth Year':'{}',\n'End Station':'{}',\n'End Time':'{}',\n'Gender':'{}',\n'Start Station':'{}',\n'Start Time':'{}',\n'Trip Duration':'{}',\n'User Type':'{}'"
         if data_input.lower() == 'yes':
             input_count = 0
+            i = 0 + z
             while input_count < 1:
                 input_count += 1
-                df1 = df[[df.columns[0], 'Start Time', 'End Time', 'Trip Duration', 'Start Station', 'End Station', 'User Type', 'Gender', 'Birth Year']]
-                print(df1.sample(n=5))
-                #print(pd.DataFrame(np.random.random(5), index=df[df.columns[0]], columns=['', 'Start Time', 'End Time', 'Trip Duration', 'Start Station', 'End Station', 'User Type', 'Gender', 'Birth Year']))
-                #print(message.format(df[df.columns[0]], df['Birth Year'], df['End Station'], df['End Time'], df['Gender'], df['Start Station'], df['Start Time'], df['Trip Duration'], df['User Type']).sample(n=1))
-        else:
+                print(df.iloc[0+i:5+i])
+                i += 1
+            z += 5
+        elif data_input.lower() == 'no':
             break
+        else:
+            print('yes or no only')
+
 
 def main():
     while True:
