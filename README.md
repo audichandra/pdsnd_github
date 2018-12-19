@@ -4,10 +4,10 @@ Include the date you created this project and README file.
 
 ### Project Title
 Replace the Project Title
-Bikesharing 
+Bikesharing
 
 ### Description
-Describe what your project is about and what it does
+Bike share project is a project that will allow the user to get information of the users within any 3 cities, specified months and specified days. 
 
 ### Files used
 Include the files used
